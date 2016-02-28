@@ -1,0 +1,30 @@
+
+%h1 So you Want to update any Movie ??
+
+= form_tag movies_updates_path, :method => :GET do
+
+  = label :@data, :@data, 'Write Name of The Movie'
+  = text_field :EnteredMovie, 'MovieName'
+  
+  
+  %h2 Please Enter Updated Values !! 
+  
+  = label :movie, :title, 'Title'
+  = text_field :movie, 'title'
+
+  = label :movie, :rating, 'Rating'
+  = text_field :movie, :rating
+  %p Please Insert These Ratings Only ['G' , 'PG', 'PG-13', 'R', 'NC-17']
+ 
+  = label :movie, :release_date, 'Released On'
+  = text_field :movie, :release_date
+  %p Please Insert date in this format only '2016-02-28'
+ 
+  =submit_tag 'Update Movie'
+
+
+
+
+
+
+

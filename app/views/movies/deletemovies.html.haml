@@ -1,0 +1,18 @@
+
+%h1 So you Want to Delete any Movie(s) ??
+
+= form_tag movies_deletemovies_path, :method => :get do
+
+  = label :@data, :@data, 'Write Name of a Movie'
+  = text_field :Entringmovie, 'MovieName'
+  =submit_tag 'Enter Name'  
+    
+
+  - @all_ratings.each do |rating|
+    = rating
+    = check_box_tag "ratings[#{rating}]","ratings_#{rating}"
+ 
+  =submit_tag 'Delete Movies'
+
+
+= link_to 'Back to Movies List', movies_path  
